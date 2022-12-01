@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: #e1e1e1;
+    font-family:sans-serif;
+}
+h1{
+    margin:30px 30px;
+    text-align: center;
+}
+.faq-container{
+    max-width:650px;
+    margin:0 auto;
+    margin-bottom:50px;
+    padding:0 30px;
+}
+.faq{
+    background-color:transparent;
+    border:1px solid #999;
+    margin-top:20px;
+    padding:25px;
+    border-radius:10px;
+    overflow: hidden;
+    position:relative;
+    transition:0.3s ease;
+}
+.faq.active{
+    background:white;
+    box-shadow:1px 1px 5px 0px #888;
+}
+.faq.active::before,
+.faq.active::after{
+    position:absolute;
+    content:"\f075";
+    font-family:'Font Awesome 5 Free';
+    font-size:90px;
+    color:red;
+    opacity:0.2;
+    top:10px;
+    left:10px;
+}
+.faq.active::before{
+    top:-10px;
+    left:-20px;
+    transform:rotateY(180deg);
+    color:green;
+}
+.title{
+    font-size:20px;
+    margin-bottom:10px;
+}
+.text{
+    font-weight:bold;
+    opacity:0.9;
+    display:none;
+}
+.faq.active .text{
+    display:block;
+}
+.faq.active .btn{
+    outline:0;
+}
+.btn{
+    position:absolute;
+    background:transparent;
+    border:none;
+    font-size:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    top:30px;
+    right:30px;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    
+}
+
+.btn .fa-times{
+    display:none;
+}
+.faq.active .btn .fa-times{
+    display:block;
+    padding:10px;
+    background:#666;
+    color:white;
+    border-radius: 100%;
+}
+.faq.active .btn .fa-chevron-down{
+    display:none;
+}
